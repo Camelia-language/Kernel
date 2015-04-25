@@ -20,14 +20,12 @@ public class KernelMain {
             else if (args[i].equals("-d")) debug = true;
             else reader = new FileReader(args[i]);
         }
-        /*
+
         if (reader == null) {
             System.out.println("usage: camelia [-d] < -e code | file.ca >");
             System.exit(1);
-        }*/
+        }
 
-        reader = new FileReader("./src/org/kernel/test/test001.ca");
         Bootstrapper.run().eval(reader);
-
     }
 }

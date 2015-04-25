@@ -1,7 +1,7 @@
 lexer grammar CameliaLexer;
 
 // Stuff added on top of the Lexer class.
-@header { package camelia.lang; }
+@header { package org.kernel.camelia.language; }
 
 // Methods added to the Lexer class.
 @members {
