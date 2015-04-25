@@ -1,7 +1,10 @@
-// $ANTLR 3.1.1 CameliaLexer.g 2015-03-08 17:33:00
- package org.kernel.camelia.language;
+// $ANTLR 3.1.1 CameliaLexer.g 2015-04-25 18:45:14
+ package org.kernel.camelia.language; 
 
 import org.antlr.runtime.*;
+import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
 
 public class CameliaLexer extends Lexer {
     public static final int CLASS=4;
