@@ -8,9 +8,9 @@ options {
 
 // Stuff added on top of the Parser class.
 @header {
-  package camelia.lang;
+  package org.kernel.camelia.language;
   
-  import camelia.lang.nodes.*;
+  import org.kernel.camelia.language.nodes.*;
   import java.util.ArrayList;
 }
 
