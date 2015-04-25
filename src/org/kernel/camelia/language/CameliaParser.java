@@ -1,9 +1,12 @@
-package org.kernel.camelia.language;
+// $ANTLR 3.1.1 CameliaParser.g 2015-04-25 18:45:30
+
+  package org.kernel.camelia.language;
   
-import java.util.ArrayList;
+  import org.kernel.camelia.language.nodes.*;
+  import java.util.ArrayList;
+
 
 import org.antlr.runtime.*;
-
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
@@ -11,7 +14,6 @@ import java.util.Map;
 import java.util.HashMap;
 
 import org.antlr.runtime.tree.*;
-import org.kernel.camelia.language.nodes.*;
 
 public class CameliaParser extends Parser {
     public static final String[] tokenNames = new String[] {
@@ -89,7 +91,7 @@ public class CameliaParser extends Parser {
     }
 
     public String[] getTokenNames() { return CameliaParser.tokenNames; }
-    public String getGrammarFileName() { return "YourLangParser.g"; }
+    public String getGrammarFileName() { return "CameliaParser.g"; }
 
 
       /**
@@ -115,28 +117,28 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "root"
-    // YourLangParser.g:55:1: root returns [Nodes nodes] : ( terminator )? ( expressions )? EOF ;
-    public final root_return root() throws RecognitionException {
-        root_return retval = new root_return();
+    // CameliaParser.g:55:1: root returns [Nodes nodes] : ( terminator )? ( expressions )? EOF ;
+    public final CameliaParser.root_return root() throws RecognitionException {
+        CameliaParser.root_return retval = new CameliaParser.root_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token EOF3=null;
-        terminator_return terminator1 = null;
+        CameliaParser.terminator_return terminator1 = null;
 
-        expressions_return expressions2 = null;
+        CameliaParser.expressions_return expressions2 = null;
 
 
         Object EOF3_tree=null;
 
         try {
-            // YourLangParser.g:55:27: ( ( terminator )? ( expressions )? EOF )
-            // YourLangParser.g:56:5: ( terminator )? ( expressions )? EOF
+            // CameliaParser.g:55:27: ( ( terminator )? ( expressions )? EOF )
+            // CameliaParser.g:56:5: ( terminator )? ( expressions )? EOF
             {
             root_0 = (Object)adaptor.nil();
 
-            // YourLangParser.g:56:5: ( terminator )?
+            // CameliaParser.g:56:5: ( terminator )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -145,7 +147,7 @@ public class CameliaParser extends Parser {
             }
             switch (alt1) {
                 case 1 :
-                    // YourLangParser.g:0:0: terminator
+                    // CameliaParser.g:0:0: terminator
                     {
                     pushFollow(FOLLOW_terminator_in_root77);
                     terminator1=terminator();
@@ -159,7 +161,7 @@ public class CameliaParser extends Parser {
 
             }
 
-            // YourLangParser.g:56:17: ( expressions )?
+            // CameliaParser.g:56:17: ( expressions )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -168,7 +170,7 @@ public class CameliaParser extends Parser {
             }
             switch (alt2) {
                 case 1 :
-                    // YourLangParser.g:0:0: expressions
+                    // CameliaParser.g:0:0: expressions
                     {
                     pushFollow(FOLLOW_expressions_in_root80);
                     expressions2=expressions();
@@ -214,26 +216,26 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "expressions"
-    // YourLangParser.g:60:1: expressions returns [Nodes nodes] : head= expression ( terminator tail= expression )* ( terminator )? ;
-    public final expressions_return expressions() throws RecognitionException {
-        expressions_return retval = new expressions_return();
+    // CameliaParser.g:60:1: expressions returns [Nodes nodes] : head= expression ( terminator tail= expression )* ( terminator )? ;
+    public final CameliaParser.expressions_return expressions() throws RecognitionException {
+        CameliaParser.expressions_return retval = new CameliaParser.expressions_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        expression_return head = null;
+        CameliaParser.expression_return head = null;
 
-        expression_return tail = null;
+        CameliaParser.expression_return tail = null;
 
-        terminator_return terminator4 = null;
+        CameliaParser.terminator_return terminator4 = null;
 
-        terminator_return terminator5 = null;
+        CameliaParser.terminator_return terminator5 = null;
 
 
 
         try {
-            // YourLangParser.g:60:34: (head= expression ( terminator tail= expression )* ( terminator )? )
-            // YourLangParser.g:61:23: head= expression ( terminator tail= expression )* ( terminator )?
+            // CameliaParser.g:60:34: (head= expression ( terminator tail= expression )* ( terminator )? )
+            // CameliaParser.g:61:23: head= expression ( terminator tail= expression )* ( terminator )?
             {
             root_0 = (Object)adaptor.nil();
 
@@ -249,14 +251,14 @@ public class CameliaParser extends Parser {
             if ( state.backtracking==0 ) {
                retval.nodes.add((head!=null?head.node:null)); 
             }
-            // YourLangParser.g:63:5: ( terminator tail= expression )*
+            // CameliaParser.g:63:5: ( terminator tail= expression )*
             loop3:
             do {
                 int alt3=2;
                 alt3 = dfa3.predict(input);
                 switch (alt3) {
             	case 1 :
-            	    // YourLangParser.g:63:6: terminator tail= expression
+            	    // CameliaParser.g:63:6: terminator tail= expression
             	    {
             	    pushFollow(FOLLOW_terminator_in_expressions142);
             	    terminator4=terminator();
@@ -282,7 +284,7 @@ public class CameliaParser extends Parser {
                 }
             } while (true);
 
-            // YourLangParser.g:66:5: ( terminator )?
+            // CameliaParser.g:66:5: ( terminator )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -291,7 +293,7 @@ public class CameliaParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // YourLangParser.g:0:0: terminator
+                    // CameliaParser.g:0:0: terminator
                     {
                     pushFollow(FOLLOW_terminator_in_expressions167);
                     terminator5=terminator();
@@ -333,20 +335,20 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // YourLangParser.g:70:1: expression returns [Node node] : assignExpression ;
-    public final expression_return expression() throws RecognitionException {
-        expression_return retval = new expression_return();
+    // CameliaParser.g:70:1: expression returns [Node node] : assignExpression ;
+    public final CameliaParser.expression_return expression() throws RecognitionException {
+        CameliaParser.expression_return retval = new CameliaParser.expression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        assignExpression_return assignExpression6 = null;
+        CameliaParser.assignExpression_return assignExpression6 = null;
 
 
 
         try {
-            // YourLangParser.g:70:31: ( assignExpression )
-            // YourLangParser.g:71:5: assignExpression
+            // CameliaParser.g:70:31: ( assignExpression )
+            // CameliaParser.g:71:5: assignExpression
             {
             root_0 = (Object)adaptor.nil();
 
@@ -386,9 +388,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "terminator"
-    // YourLangParser.g:75:1: terminator : ( NEWLINE | SEMICOLON )+ ;
-    public final terminator_return terminator() throws RecognitionException {
-        terminator_return retval = new terminator_return();
+    // CameliaParser.g:75:1: terminator : ( NEWLINE | SEMICOLON )+ ;
+    public final CameliaParser.terminator_return terminator() throws RecognitionException {
+        CameliaParser.terminator_return retval = new CameliaParser.terminator_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -398,12 +400,12 @@ public class CameliaParser extends Parser {
         Object set7_tree=null;
 
         try {
-            // YourLangParser.g:75:11: ( ( NEWLINE | SEMICOLON )+ )
-            // YourLangParser.g:75:13: ( NEWLINE | SEMICOLON )+
+            // CameliaParser.g:75:11: ( ( NEWLINE | SEMICOLON )+ )
+            // CameliaParser.g:75:13: ( NEWLINE | SEMICOLON )+
             {
             root_0 = (Object)adaptor.nil();
 
-            // YourLangParser.g:75:13: ( NEWLINE | SEMICOLON )+
+            // CameliaParser.g:75:13: ( NEWLINE | SEMICOLON )+
             int cnt5=0;
             loop5:
             do {
@@ -417,7 +419,7 @@ public class CameliaParser extends Parser {
 
                 switch (alt5) {
             	case 1 :
-            	    // YourLangParser.g:
+            	    // CameliaParser.g:
             	    {
             	    set7=(Token)input.LT(1);
             	    if ( input.LA(1)==SEMICOLON||input.LA(1)==NEWLINE ) {
@@ -473,21 +475,21 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "assignExpression"
-    // YourLangParser.g:81:1: assignExpression returns [Node node] : ( assign | e= orExpression );
-    public final assignExpression_return assignExpression() throws RecognitionException {
-        assignExpression_return retval = new assignExpression_return();
+    // CameliaParser.g:81:1: assignExpression returns [Node node] : ( assign | e= orExpression );
+    public final CameliaParser.assignExpression_return assignExpression() throws RecognitionException {
+        CameliaParser.assignExpression_return retval = new CameliaParser.assignExpression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        orExpression_return e = null;
+        CameliaParser.orExpression_return e = null;
 
-        assign_return assign8 = null;
+        CameliaParser.assign_return assign8 = null;
 
 
 
         try {
-            // YourLangParser.g:81:37: ( assign | e= orExpression )
+            // CameliaParser.g:81:37: ( assign | e= orExpression )
             int alt6=2;
             switch ( input.LA(1) ) {
             case NAME:
@@ -586,7 +588,7 @@ public class CameliaParser extends Parser {
 
             switch (alt6) {
                 case 1 :
-                    // YourLangParser.g:82:5: assign
+                    // CameliaParser.g:82:5: assign
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -603,7 +605,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:83:5: e= orExpression
+                    // CameliaParser.g:83:5: e= orExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -646,30 +648,30 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "orExpression"
-    // YourLangParser.g:86:1: orExpression returns [Node node] : (receiver= andExpression OR arg= orExpression | e= andExpression );
-    public final orExpression_return orExpression() throws RecognitionException {
-        orExpression_return retval = new orExpression_return();
+    // CameliaParser.g:86:1: orExpression returns [Node node] : (receiver= andExpression OR arg= orExpression | e= andExpression );
+    public final CameliaParser.orExpression_return orExpression() throws RecognitionException {
+        CameliaParser.orExpression_return retval = new CameliaParser.orExpression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token OR9=null;
-        andExpression_return receiver = null;
+        CameliaParser.andExpression_return receiver = null;
 
-        orExpression_return arg = null;
+        CameliaParser.orExpression_return arg = null;
 
-        andExpression_return e = null;
+        CameliaParser.andExpression_return e = null;
 
 
         Object OR9_tree=null;
 
         try {
-            // YourLangParser.g:86:33: (receiver= andExpression OR arg= orExpression | e= andExpression )
+            // CameliaParser.g:86:33: (receiver= andExpression OR arg= orExpression | e= andExpression )
             int alt7=2;
             alt7 = dfa7.predict(input);
             switch (alt7) {
                 case 1 :
-                    // YourLangParser.g:87:5: receiver= andExpression OR arg= orExpression
+                    // CameliaParser.g:87:5: receiver= andExpression OR arg= orExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -691,13 +693,13 @@ public class CameliaParser extends Parser {
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, arg.getTree());
                     if ( state.backtracking==0 ) {
-                       retval.node = new OrNode((receiver!=null?receiver.node:null), (arg!=null?arg.node:null));
+                       retval.node = new OrNode((receiver!=null?receiver.node:null), (arg!=null?arg.node:null)); 
                     }
 
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:89:5: e= andExpression
+                    // CameliaParser.g:89:5: e= andExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -740,30 +742,30 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "andExpression"
-    // YourLangParser.g:92:1: andExpression returns [Node node] : (receiver= relationalExpression AND arg= andExpression | e= relationalExpression );
-    public final andExpression_return andExpression() throws RecognitionException {
-        andExpression_return retval = new andExpression_return();
+    // CameliaParser.g:92:1: andExpression returns [Node node] : (receiver= relationalExpression AND arg= andExpression | e= relationalExpression );
+    public final CameliaParser.andExpression_return andExpression() throws RecognitionException {
+        CameliaParser.andExpression_return retval = new CameliaParser.andExpression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token AND10=null;
-        relationalExpression_return receiver = null;
+        CameliaParser.relationalExpression_return receiver = null;
 
-        andExpression_return arg = null;
+        CameliaParser.andExpression_return arg = null;
 
-        relationalExpression_return e = null;
+        CameliaParser.relationalExpression_return e = null;
 
 
         Object AND10_tree=null;
 
         try {
-            // YourLangParser.g:92:34: (receiver= relationalExpression AND arg= andExpression | e= relationalExpression )
+            // CameliaParser.g:92:34: (receiver= relationalExpression AND arg= andExpression | e= relationalExpression )
             int alt8=2;
             alt8 = dfa8.predict(input);
             switch (alt8) {
                 case 1 :
-                    // YourLangParser.g:93:5: receiver= relationalExpression AND arg= andExpression
+                    // CameliaParser.g:93:5: receiver= relationalExpression AND arg= andExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -791,7 +793,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:95:5: e= relationalExpression
+                    // CameliaParser.g:95:5: e= relationalExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -834,30 +836,30 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "relationalExpression"
-    // YourLangParser.g:98:1: relationalExpression returns [Node node] : (receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression | e= additiveExpression );
-    public final relationalExpression_return relationalExpression() throws RecognitionException {
-        relationalExpression_return retval = new relationalExpression_return();
+    // CameliaParser.g:98:1: relationalExpression returns [Node node] : (receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression | e= additiveExpression );
+    public final CameliaParser.relationalExpression_return relationalExpression() throws RecognitionException {
+        CameliaParser.relationalExpression_return retval = new CameliaParser.relationalExpression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token op=null;
-        additiveExpression_return receiver = null;
+        CameliaParser.additiveExpression_return receiver = null;
 
-        relationalExpression_return arg = null;
+        CameliaParser.relationalExpression_return arg = null;
 
-        additiveExpression_return e = null;
+        CameliaParser.additiveExpression_return e = null;
 
 
         Object op_tree=null;
 
         try {
-            // YourLangParser.g:98:41: (receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression | e= additiveExpression )
+            // CameliaParser.g:98:41: (receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression | e= additiveExpression )
             int alt9=2;
             alt9 = dfa9.predict(input);
             switch (alt9) {
                 case 1 :
-                    // YourLangParser.g:99:5: receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression
+                    // CameliaParser.g:99:5: receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -892,7 +894,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:102:5: e= additiveExpression
+                    // CameliaParser.g:102:5: e= additiveExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -935,30 +937,30 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "additiveExpression"
-    // YourLangParser.g:105:1: additiveExpression returns [Node node] : (receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression | e= multiplicativeExpression );
-    public final additiveExpression_return additiveExpression() throws RecognitionException {
-        additiveExpression_return retval = new additiveExpression_return();
+    // CameliaParser.g:105:1: additiveExpression returns [Node node] : (receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression | e= multiplicativeExpression );
+    public final CameliaParser.additiveExpression_return additiveExpression() throws RecognitionException {
+        CameliaParser.additiveExpression_return retval = new CameliaParser.additiveExpression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token op=null;
-        multiplicativeExpression_return receiver = null;
+        CameliaParser.multiplicativeExpression_return receiver = null;
 
-        additiveExpression_return arg = null;
+        CameliaParser.additiveExpression_return arg = null;
 
-        multiplicativeExpression_return e = null;
+        CameliaParser.multiplicativeExpression_return e = null;
 
 
         Object op_tree=null;
 
         try {
-            // YourLangParser.g:105:39: (receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression | e= multiplicativeExpression )
+            // CameliaParser.g:105:39: (receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression | e= multiplicativeExpression )
             int alt10=2;
             alt10 = dfa10.predict(input);
             switch (alt10) {
                 case 1 :
-                    // YourLangParser.g:106:5: receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression
+                    // CameliaParser.g:106:5: receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -993,7 +995,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:108:5: e= multiplicativeExpression
+                    // CameliaParser.g:108:5: e= multiplicativeExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1036,30 +1038,30 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "multiplicativeExpression"
-    // YourLangParser.g:111:1: multiplicativeExpression returns [Node node] : (receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression | e= unaryExpression );
-    public final multiplicativeExpression_return multiplicativeExpression() throws RecognitionException {
-        multiplicativeExpression_return retval = new multiplicativeExpression_return();
+    // CameliaParser.g:111:1: multiplicativeExpression returns [Node node] : (receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression | e= unaryExpression );
+    public final CameliaParser.multiplicativeExpression_return multiplicativeExpression() throws RecognitionException {
+        CameliaParser.multiplicativeExpression_return retval = new CameliaParser.multiplicativeExpression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token op=null;
-        unaryExpression_return receiver = null;
+        CameliaParser.unaryExpression_return receiver = null;
 
-        multiplicativeExpression_return arg = null;
+        CameliaParser.multiplicativeExpression_return arg = null;
 
-        unaryExpression_return e = null;
+        CameliaParser.unaryExpression_return e = null;
 
 
         Object op_tree=null;
 
         try {
-            // YourLangParser.g:111:45: (receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression | e= unaryExpression )
+            // CameliaParser.g:111:45: (receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression | e= unaryExpression )
             int alt11=2;
             alt11 = dfa11.predict(input);
             switch (alt11) {
                 case 1 :
-                    // YourLangParser.g:112:5: receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression
+                    // CameliaParser.g:112:5: receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1094,7 +1096,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:114:5: e= unaryExpression
+                    // CameliaParser.g:114:5: e= unaryExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1137,23 +1139,23 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "unaryExpression"
-    // YourLangParser.g:117:1: unaryExpression returns [Node node] : ( NOT receiver= unaryExpression | e= primaryExpression );
-    public final unaryExpression_return unaryExpression() throws RecognitionException {
-        unaryExpression_return retval = new unaryExpression_return();
+    // CameliaParser.g:117:1: unaryExpression returns [Node node] : ( NOT receiver= unaryExpression | e= primaryExpression );
+    public final CameliaParser.unaryExpression_return unaryExpression() throws RecognitionException {
+        CameliaParser.unaryExpression_return retval = new CameliaParser.unaryExpression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token NOT11=null;
-        unaryExpression_return receiver = null;
+        CameliaParser.unaryExpression_return receiver = null;
 
-        primaryExpression_return e = null;
+        CameliaParser.primaryExpression_return e = null;
 
 
         Object NOT11_tree=null;
 
         try {
-            // YourLangParser.g:117:36: ( NOT receiver= unaryExpression | e= primaryExpression )
+            // CameliaParser.g:117:36: ( NOT receiver= unaryExpression | e= primaryExpression )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1172,7 +1174,7 @@ public class CameliaParser extends Parser {
             }
             switch (alt12) {
                 case 1 :
-                    // YourLangParser.g:118:5: NOT receiver= unaryExpression
+                    // CameliaParser.g:118:5: NOT receiver= unaryExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1194,7 +1196,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:119:5: e= primaryExpression
+                    // CameliaParser.g:119:5: e= primaryExpression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1237,42 +1239,42 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "primaryExpression"
-    // YourLangParser.g:123:1: primaryExpression returns [Node node] : ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | tryBlock | OPEN_PARENT expression CLOSE_PARENT );
-    public final primaryExpression_return primaryExpression() throws RecognitionException {
-        primaryExpression_return retval = new primaryExpression_return();
+    // CameliaParser.g:123:1: primaryExpression returns [Node node] : ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | tryBlock | OPEN_PARENT expression CLOSE_PARENT );
+    public final CameliaParser.primaryExpression_return primaryExpression() throws RecognitionException {
+        CameliaParser.primaryExpression_return retval = new CameliaParser.primaryExpression_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token OPEN_PARENT19=null;
         Token CLOSE_PARENT21=null;
-        literal_return literal12 = null;
+        CameliaParser.literal_return literal12 = null;
 
-        call_return call13 = null;
+        CameliaParser.call_return call13 = null;
 
-        methodDefinition_return methodDefinition14 = null;
+        CameliaParser.methodDefinition_return methodDefinition14 = null;
 
-        classDefinition_return classDefinition15 = null;
+        CameliaParser.classDefinition_return classDefinition15 = null;
 
-        ifBlock_return ifBlock16 = null;
+        CameliaParser.ifBlock_return ifBlock16 = null;
 
-        whileBlock_return whileBlock17 = null;
+        CameliaParser.whileBlock_return whileBlock17 = null;
 
-        tryBlock_return tryBlock18 = null;
+        CameliaParser.tryBlock_return tryBlock18 = null;
 
-        expression_return expression20 = null;
+        CameliaParser.expression_return expression20 = null;
 
 
         Object OPEN_PARENT19_tree=null;
         Object CLOSE_PARENT21_tree=null;
 
         try {
-            // YourLangParser.g:123:38: ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | tryBlock | OPEN_PARENT expression CLOSE_PARENT )
+            // CameliaParser.g:123:38: ( literal | call | methodDefinition | classDefinition | ifBlock | whileBlock | tryBlock | OPEN_PARENT expression CLOSE_PARENT )
             int alt13=8;
             alt13 = dfa13.predict(input);
             switch (alt13) {
                 case 1 :
-                    // YourLangParser.g:124:5: literal
+                    // CameliaParser.g:124:5: literal
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1289,7 +1291,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:125:5: call
+                    // CameliaParser.g:125:5: call
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1306,7 +1308,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // YourLangParser.g:126:5: methodDefinition
+                    // CameliaParser.g:126:5: methodDefinition
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1323,7 +1325,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // YourLangParser.g:127:5: classDefinition
+                    // CameliaParser.g:127:5: classDefinition
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1340,7 +1342,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // YourLangParser.g:128:5: ifBlock
+                    // CameliaParser.g:128:5: ifBlock
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1357,7 +1359,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // YourLangParser.g:129:5: whileBlock
+                    // CameliaParser.g:129:5: whileBlock
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1374,7 +1376,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // YourLangParser.g:130:5: tryBlock
+                    // CameliaParser.g:130:5: tryBlock
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1391,7 +1393,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // YourLangParser.g:131:5: OPEN_PARENT expression CLOSE_PARENT
+                    // CameliaParser.g:131:5: OPEN_PARENT expression CLOSE_PARENT
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1444,9 +1446,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "literal"
-    // YourLangParser.g:137:1: literal returns [Node node] : ( STRING | INTEGER | FLOAT | NIL | TRUE | FALSE | constant | instanceVariable | self );
-    public final literal_return literal() throws RecognitionException {
-        literal_return retval = new literal_return();
+    // CameliaParser.g:137:1: literal returns [Node node] : ( STRING | INTEGER | FLOAT | NIL | TRUE | FALSE | constant | instanceVariable | self );
+    public final CameliaParser.literal_return literal() throws RecognitionException {
+        CameliaParser.literal_return retval = new CameliaParser.literal_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -1457,11 +1459,11 @@ public class CameliaParser extends Parser {
         Token NIL25=null;
         Token TRUE26=null;
         Token FALSE27=null;
-        constant_return constant28 = null;
+        CameliaParser.constant_return constant28 = null;
 
-        instanceVariable_return instanceVariable29 = null;
+        CameliaParser.instanceVariable_return instanceVariable29 = null;
 
-        self_return self30 = null;
+        CameliaParser.self_return self30 = null;
 
 
         Object STRING22_tree=null;
@@ -1472,7 +1474,7 @@ public class CameliaParser extends Parser {
         Object FALSE27_tree=null;
 
         try {
-            // YourLangParser.g:137:28: ( STRING | INTEGER | FLOAT | NIL | TRUE | FALSE | constant | instanceVariable | self )
+            // CameliaParser.g:137:28: ( STRING | INTEGER | FLOAT | NIL | TRUE | FALSE | constant | instanceVariable | self )
             int alt14=9;
             switch ( input.LA(1) ) {
             case STRING:
@@ -1530,7 +1532,7 @@ public class CameliaParser extends Parser {
 
             switch (alt14) {
                 case 1 :
-                    // YourLangParser.g:138:5: STRING
+                    // CameliaParser.g:138:5: STRING
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1546,7 +1548,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:139:5: INTEGER
+                    // CameliaParser.g:139:5: INTEGER
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1562,7 +1564,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // YourLangParser.g:140:5: FLOAT
+                    // CameliaParser.g:140:5: FLOAT
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1578,7 +1580,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // YourLangParser.g:141:5: NIL
+                    // CameliaParser.g:141:5: NIL
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1594,7 +1596,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // YourLangParser.g:142:5: TRUE
+                    // CameliaParser.g:142:5: TRUE
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1610,7 +1612,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // YourLangParser.g:143:5: FALSE
+                    // CameliaParser.g:143:5: FALSE
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1626,7 +1628,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // YourLangParser.g:144:5: constant
+                    // CameliaParser.g:144:5: constant
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1643,7 +1645,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // YourLangParser.g:145:5: instanceVariable
+                    // CameliaParser.g:145:5: instanceVariable
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1660,7 +1662,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // YourLangParser.g:146:5: self
+                    // CameliaParser.g:146:5: self
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -1703,9 +1705,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "self"
-    // YourLangParser.g:150:1: self returns [SelfNode node] : SELF ;
-    public final self_return self() throws RecognitionException {
-        self_return retval = new self_return();
+    // CameliaParser.g:150:1: self returns [SelfNode node] : SELF ;
+    public final CameliaParser.self_return self() throws RecognitionException {
+        CameliaParser.self_return retval = new CameliaParser.self_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -1715,8 +1717,8 @@ public class CameliaParser extends Parser {
         Object SELF31_tree=null;
 
         try {
-            // YourLangParser.g:150:29: ( SELF )
-            // YourLangParser.g:151:5: SELF
+            // CameliaParser.g:150:29: ( SELF )
+            // CameliaParser.g:151:5: SELF
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1726,7 +1728,7 @@ public class CameliaParser extends Parser {
             adaptor.addChild(root_0, SELF31_tree);
             }
             if ( state.backtracking==0 ) {
-               retval.node = new SelfNode();
+               retval.node = new SelfNode(); 
             }
 
             }
@@ -1756,9 +1758,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "instanceVariable"
-    // YourLangParser.g:155:1: instanceVariable returns [InstanceVariableNode node] : AT NAME ;
-    public final instanceVariable_return instanceVariable() throws RecognitionException {
-        instanceVariable_return retval = new instanceVariable_return();
+    // CameliaParser.g:155:1: instanceVariable returns [InstanceVariableNode node] : AT NAME ;
+    public final CameliaParser.instanceVariable_return instanceVariable() throws RecognitionException {
+        CameliaParser.instanceVariable_return retval = new CameliaParser.instanceVariable_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -1770,8 +1772,8 @@ public class CameliaParser extends Parser {
         Object NAME33_tree=null;
 
         try {
-            // YourLangParser.g:155:53: ( AT NAME )
-            // YourLangParser.g:156:5: AT NAME
+            // CameliaParser.g:155:53: ( AT NAME )
+            // CameliaParser.g:156:5: AT NAME
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1816,32 +1818,32 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "call"
-    // YourLangParser.g:160:1: call returns [Node node] : ( literal DOT )? (head= message DOT )* tail= message ;
-    public final call_return call() throws RecognitionException {
-        call_return retval = new call_return();
+    // CameliaParser.g:160:1: call returns [Node node] : ( literal DOT )? (head= message DOT )* tail= message ;
+    public final CameliaParser.call_return call() throws RecognitionException {
+        CameliaParser.call_return retval = new CameliaParser.call_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token DOT35=null;
         Token DOT36=null;
-        message_return head = null;
+        CameliaParser.message_return head = null;
 
-        message_return tail = null;
+        CameliaParser.message_return tail = null;
 
-        literal_return literal34 = null;
+        CameliaParser.literal_return literal34 = null;
 
 
         Object DOT35_tree=null;
         Object DOT36_tree=null;
 
         try {
-            // YourLangParser.g:160:25: ( ( literal DOT )? (head= message DOT )* tail= message )
-            // YourLangParser.g:161:5: ( literal DOT )? (head= message DOT )* tail= message
+            // CameliaParser.g:160:25: ( ( literal DOT )? (head= message DOT )* tail= message )
+            // CameliaParser.g:161:5: ( literal DOT )? (head= message DOT )* tail= message
             {
             root_0 = (Object)adaptor.nil();
 
-            // YourLangParser.g:161:5: ( literal DOT )?
+            // CameliaParser.g:161:5: ( literal DOT )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1850,7 +1852,7 @@ public class CameliaParser extends Parser {
             }
             switch (alt15) {
                 case 1 :
-                    // YourLangParser.g:161:6: literal DOT
+                    // CameliaParser.g:161:6: literal DOT
                     {
                     pushFollow(FOLLOW_literal_in_call1070);
                     literal34=literal();
@@ -1872,7 +1874,7 @@ public class CameliaParser extends Parser {
 
             }
 
-            // YourLangParser.g:163:5: (head= message DOT )*
+            // CameliaParser.g:163:5: (head= message DOT )*
             loop16:
             do {
                 int alt16=2;
@@ -1881,7 +1883,7 @@ public class CameliaParser extends Parser {
                 if ( (LA16_0==NAME) ) {
                     int LA16_1 = input.LA(2);
 
-                    if ( (synpred37_YourLangParser()) ) {
+                    if ( (synpred37_CameliaParser()) ) {
                         alt16=1;
                     }
 
@@ -1891,7 +1893,7 @@ public class CameliaParser extends Parser {
 
                 switch (alt16) {
             	case 1 :
-            	    // YourLangParser.g:163:6: head= message DOT
+            	    // CameliaParser.g:163:6: head= message DOT
             	    {
             	    pushFollow(FOLLOW_message_in_call1111);
             	    head=message();
@@ -1953,9 +1955,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "message"
-    // YourLangParser.g:169:1: message returns [CallNode node] : ( NAME | NAME OPEN_PARENT CLOSE_PARENT | NAME OPEN_PARENT arguments CLOSE_PARENT );
-    public final message_return message() throws RecognitionException {
-        message_return retval = new message_return();
+    // CameliaParser.g:169:1: message returns [CallNode node] : ( NAME | NAME OPEN_PARENT CLOSE_PARENT | NAME OPEN_PARENT arguments CLOSE_PARENT );
+    public final CameliaParser.message_return message() throws RecognitionException {
+        CameliaParser.message_return retval = new CameliaParser.message_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -1967,7 +1969,7 @@ public class CameliaParser extends Parser {
         Token NAME41=null;
         Token OPEN_PARENT42=null;
         Token CLOSE_PARENT44=null;
-        arguments_return arguments43 = null;
+        CameliaParser.arguments_return arguments43 = null;
 
 
         Object NAME37_tree=null;
@@ -1979,7 +1981,7 @@ public class CameliaParser extends Parser {
         Object CLOSE_PARENT44_tree=null;
 
         try {
-            // YourLangParser.g:169:32: ( NAME | NAME OPEN_PARENT CLOSE_PARENT | NAME OPEN_PARENT arguments CLOSE_PARENT )
+            // CameliaParser.g:169:32: ( NAME | NAME OPEN_PARENT CLOSE_PARENT | NAME OPEN_PARENT arguments CLOSE_PARENT )
             int alt17=3;
             int LA17_0 = input.LA(1);
 
@@ -2023,7 +2025,7 @@ public class CameliaParser extends Parser {
             }
             switch (alt17) {
                 case 1 :
-                    // YourLangParser.g:170:5: NAME
+                    // CameliaParser.g:170:5: NAME
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2039,7 +2041,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:171:5: NAME OPEN_PARENT CLOSE_PARENT
+                    // CameliaParser.g:171:5: NAME OPEN_PARENT CLOSE_PARENT
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2065,7 +2067,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // YourLangParser.g:172:5: NAME OPEN_PARENT arguments CLOSE_PARENT
+                    // CameliaParser.g:172:5: NAME OPEN_PARENT arguments CLOSE_PARENT
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2123,24 +2125,24 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "arguments"
-    // YourLangParser.g:178:1: arguments returns [ArrayList<Node> nodes] : head= expression ( COMMA tail= expression )* ;
-    public final arguments_return arguments() throws RecognitionException {
-        arguments_return retval = new arguments_return();
+    // CameliaParser.g:178:1: arguments returns [ArrayList<Node> nodes] : head= expression ( COMMA tail= expression )* ;
+    public final CameliaParser.arguments_return arguments() throws RecognitionException {
+        CameliaParser.arguments_return retval = new CameliaParser.arguments_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token COMMA45=null;
-        expression_return head = null;
+        CameliaParser.expression_return head = null;
 
-        expression_return tail = null;
+        CameliaParser.expression_return tail = null;
 
 
         Object COMMA45_tree=null;
 
         try {
-            // YourLangParser.g:178:42: (head= expression ( COMMA tail= expression )* )
-            // YourLangParser.g:179:37: head= expression ( COMMA tail= expression )*
+            // CameliaParser.g:178:42: (head= expression ( COMMA tail= expression )* )
+            // CameliaParser.g:179:37: head= expression ( COMMA tail= expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2156,7 +2158,7 @@ public class CameliaParser extends Parser {
             if ( state.backtracking==0 ) {
                retval.nodes.add((head!=null?head.node:null)); 
             }
-            // YourLangParser.g:181:5: ( COMMA tail= expression )*
+            // CameliaParser.g:181:5: ( COMMA tail= expression )*
             loop18:
             do {
                 int alt18=2;
@@ -2169,7 +2171,7 @@ public class CameliaParser extends Parser {
 
                 switch (alt18) {
             	case 1 :
-            	    // YourLangParser.g:181:6: COMMA tail= expression
+            	    // CameliaParser.g:181:6: COMMA tail= expression
             	    {
             	    COMMA45=(Token)match(input,COMMA,FOLLOW_COMMA_in_arguments1361); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -2222,9 +2224,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "constant"
-    // YourLangParser.g:187:1: constant returns [ConstantNode node] : CONSTANT ;
-    public final constant_return constant() throws RecognitionException {
-        constant_return retval = new constant_return();
+    // CameliaParser.g:187:1: constant returns [ConstantNode node] : CONSTANT ;
+    public final CameliaParser.constant_return constant() throws RecognitionException {
+        CameliaParser.constant_return retval = new CameliaParser.constant_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -2234,8 +2236,8 @@ public class CameliaParser extends Parser {
         Object CONSTANT46_tree=null;
 
         try {
-            // YourLangParser.g:187:37: ( CONSTANT )
-            // YourLangParser.g:188:5: CONSTANT
+            // CameliaParser.g:187:37: ( CONSTANT )
+            // CameliaParser.g:188:5: CONSTANT
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2275,9 +2277,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "assign"
-    // YourLangParser.g:192:1: assign returns [Node node] : ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression );
-    public final assign_return assign() throws RecognitionException {
-        assign_return retval = new assign_return();
+    // CameliaParser.g:192:1: assign returns [Node node] : ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression );
+    public final CameliaParser.assign_return assign() throws RecognitionException {
+        CameliaParser.assign_return retval = new CameliaParser.assign_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -2289,11 +2291,11 @@ public class CameliaParser extends Parser {
         Token AT53=null;
         Token NAME54=null;
         Token ASSIGN55=null;
-        expression_return expression49 = null;
+        CameliaParser.expression_return expression49 = null;
 
-        expression_return expression52 = null;
+        CameliaParser.expression_return expression52 = null;
 
-        expression_return expression56 = null;
+        CameliaParser.expression_return expression56 = null;
 
 
         Object NAME47_tree=null;
@@ -2305,7 +2307,7 @@ public class CameliaParser extends Parser {
         Object ASSIGN55_tree=null;
 
         try {
-            // YourLangParser.g:192:27: ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression )
+            // CameliaParser.g:192:27: ( NAME ASSIGN expression | CONSTANT ASSIGN expression | AT NAME ASSIGN expression )
             int alt19=3;
             switch ( input.LA(1) ) {
             case NAME:
@@ -2333,7 +2335,7 @@ public class CameliaParser extends Parser {
 
             switch (alt19) {
                 case 1 :
-                    // YourLangParser.g:193:5: NAME ASSIGN expression
+                    // CameliaParser.g:193:5: NAME ASSIGN expression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2360,7 +2362,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // YourLangParser.g:194:5: CONSTANT ASSIGN expression
+                    // CameliaParser.g:194:5: CONSTANT ASSIGN expression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2387,7 +2389,7 @@ public class CameliaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // YourLangParser.g:195:5: AT NAME ASSIGN expression
+                    // CameliaParser.g:195:5: AT NAME ASSIGN expression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2445,9 +2447,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "methodDefinition"
-    // YourLangParser.g:198:1: methodDefinition returns [MethodDefinitionNode node] : DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END ;
-    public final methodDefinition_return methodDefinition() throws RecognitionException {
-        methodDefinition_return retval = new methodDefinition_return();
+    // CameliaParser.g:198:1: methodDefinition returns [MethodDefinitionNode node] : DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END ;
+    public final CameliaParser.methodDefinition_return methodDefinition() throws RecognitionException {
+        CameliaParser.methodDefinition_return retval = new CameliaParser.methodDefinition_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -2457,11 +2459,11 @@ public class CameliaParser extends Parser {
         Token OPEN_PARENT59=null;
         Token CLOSE_PARENT61=null;
         Token END64=null;
-        parameters_return parameters60 = null;
+        CameliaParser.parameters_return parameters60 = null;
 
-        terminator_return terminator62 = null;
+        CameliaParser.terminator_return terminator62 = null;
 
-        expressions_return expressions63 = null;
+        CameliaParser.expressions_return expressions63 = null;
 
 
         Object DEF57_tree=null;
@@ -2471,8 +2473,8 @@ public class CameliaParser extends Parser {
         Object END64_tree=null;
 
         try {
-            // YourLangParser.g:198:53: ( DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END )
-            // YourLangParser.g:199:5: DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END
+            // CameliaParser.g:198:53: ( DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END )
+            // CameliaParser.g:199:5: DEF NAME ( OPEN_PARENT ( parameters )? CLOSE_PARENT )? terminator expressions END
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2486,7 +2488,7 @@ public class CameliaParser extends Parser {
             NAME58_tree = (Object)adaptor.create(NAME58);
             adaptor.addChild(root_0, NAME58_tree);
             }
-            // YourLangParser.g:199:14: ( OPEN_PARENT ( parameters )? CLOSE_PARENT )?
+            // CameliaParser.g:199:14: ( OPEN_PARENT ( parameters )? CLOSE_PARENT )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -2495,14 +2497,14 @@ public class CameliaParser extends Parser {
             }
             switch (alt21) {
                 case 1 :
-                    // YourLangParser.g:199:15: OPEN_PARENT ( parameters )? CLOSE_PARENT
+                    // CameliaParser.g:199:15: OPEN_PARENT ( parameters )? CLOSE_PARENT
                     {
                     OPEN_PARENT59=(Token)match(input,OPEN_PARENT,FOLLOW_OPEN_PARENT_in_methodDefinition1532); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     OPEN_PARENT59_tree = (Object)adaptor.create(OPEN_PARENT59);
                     adaptor.addChild(root_0, OPEN_PARENT59_tree);
                     }
-                    // YourLangParser.g:199:27: ( parameters )?
+                    // CameliaParser.g:199:27: ( parameters )?
                     int alt20=2;
                     int LA20_0 = input.LA(1);
 
@@ -2511,7 +2513,7 @@ public class CameliaParser extends Parser {
                     }
                     switch (alt20) {
                         case 1 :
-                            // YourLangParser.g:0:0: parameters
+                            // CameliaParser.g:0:0: parameters
                             {
                             pushFollow(FOLLOW_parameters_in_methodDefinition1534);
                             parameters60=parameters();
@@ -2584,9 +2586,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "parameters"
-    // YourLangParser.g:205:1: parameters returns [ArrayList<String> names] : head= NAME ( COMMA tail= NAME )* ;
-    public final parameters_return parameters() throws RecognitionException {
-        parameters_return retval = new parameters_return();
+    // CameliaParser.g:205:1: parameters returns [ArrayList<String> names] : head= NAME ( COMMA tail= NAME )* ;
+    public final CameliaParser.parameters_return parameters() throws RecognitionException {
+        CameliaParser.parameters_return retval = new CameliaParser.parameters_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -2600,8 +2602,8 @@ public class CameliaParser extends Parser {
         Object COMMA65_tree=null;
 
         try {
-            // YourLangParser.g:205:45: (head= NAME ( COMMA tail= NAME )* )
-            // YourLangParser.g:206:37: head= NAME ( COMMA tail= NAME )*
+            // CameliaParser.g:205:45: (head= NAME ( COMMA tail= NAME )* )
+            // CameliaParser.g:206:37: head= NAME ( COMMA tail= NAME )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2616,7 +2618,7 @@ public class CameliaParser extends Parser {
             if ( state.backtracking==0 ) {
                retval.names.add((head!=null?head.getText():null)); 
             }
-            // YourLangParser.g:208:5: ( COMMA tail= NAME )*
+            // CameliaParser.g:208:5: ( COMMA tail= NAME )*
             loop22:
             do {
                 int alt22=2;
@@ -2629,7 +2631,7 @@ public class CameliaParser extends Parser {
 
                 switch (alt22) {
             	case 1 :
-            	    // YourLangParser.g:208:6: COMMA tail= NAME
+            	    // CameliaParser.g:208:6: COMMA tail= NAME
             	    {
             	    COMMA65=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameters1675); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -2681,9 +2683,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "classDefinition"
-    // YourLangParser.g:213:1: classDefinition returns [ClassDefinitionNode node] : CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END ;
-    public final classDefinition_return classDefinition() throws RecognitionException {
-        classDefinition_return retval = new classDefinition_return();
+    // CameliaParser.g:213:1: classDefinition returns [ClassDefinitionNode node] : CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END ;
+    public final CameliaParser.classDefinition_return classDefinition() throws RecognitionException {
+        CameliaParser.classDefinition_return retval = new CameliaParser.classDefinition_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -2693,9 +2695,9 @@ public class CameliaParser extends Parser {
         Token CLASS66=null;
         Token LT67=null;
         Token END70=null;
-        terminator_return terminator68 = null;
+        CameliaParser.terminator_return terminator68 = null;
 
-        expressions_return expressions69 = null;
+        CameliaParser.expressions_return expressions69 = null;
 
 
         Object name_tree=null;
@@ -2705,8 +2707,8 @@ public class CameliaParser extends Parser {
         Object END70_tree=null;
 
         try {
-            // YourLangParser.g:213:51: ( CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END )
-            // YourLangParser.g:214:5: CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END
+            // CameliaParser.g:213:51: ( CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END )
+            // CameliaParser.g:214:5: CLASS name= CONSTANT ( LT superClass= CONSTANT )? terminator expressions END
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2720,7 +2722,7 @@ public class CameliaParser extends Parser {
             name_tree = (Object)adaptor.create(name);
             adaptor.addChild(root_0, name_tree);
             }
-            // YourLangParser.g:214:25: ( LT superClass= CONSTANT )?
+            // CameliaParser.g:214:25: ( LT superClass= CONSTANT )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2729,7 +2731,7 @@ public class CameliaParser extends Parser {
             }
             switch (alt23) {
                 case 1 :
-                    // YourLangParser.g:214:26: LT superClass= CONSTANT
+                    // CameliaParser.g:214:26: LT superClass= CONSTANT
                     {
                     LT67=(Token)match(input,LT,FOLLOW_LT_in_classDefinition1739); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -2795,9 +2797,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "ifBlock"
-    // YourLangParser.g:219:1: ifBlock returns [IfNode node] : IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END ;
-    public final ifBlock_return ifBlock() throws RecognitionException {
-        ifBlock_return retval = new ifBlock_return();
+    // CameliaParser.g:219:1: ifBlock returns [IfNode node] : IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END ;
+    public final CameliaParser.ifBlock_return ifBlock() throws RecognitionException {
+        CameliaParser.ifBlock_return retval = new CameliaParser.ifBlock_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -2805,15 +2807,15 @@ public class CameliaParser extends Parser {
         Token IF71=null;
         Token ELSE73=null;
         Token END75=null;
-        expression_return condition = null;
+        CameliaParser.expression_return condition = null;
 
-        expressions_return ifBody = null;
+        CameliaParser.expressions_return ifBody = null;
 
-        expressions_return elseBody = null;
+        CameliaParser.expressions_return elseBody = null;
 
-        terminator_return terminator72 = null;
+        CameliaParser.terminator_return terminator72 = null;
 
-        terminator_return terminator74 = null;
+        CameliaParser.terminator_return terminator74 = null;
 
 
         Object IF71_tree=null;
@@ -2821,8 +2823,8 @@ public class CameliaParser extends Parser {
         Object END75_tree=null;
 
         try {
-            // YourLangParser.g:219:30: ( IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END )
-            // YourLangParser.g:220:5: IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END
+            // CameliaParser.g:219:30: ( IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END )
+            // CameliaParser.g:220:5: IF condition= expression terminator ifBody= expressions ( ELSE terminator elseBody= expressions )? END
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2849,7 +2851,7 @@ public class CameliaParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, ifBody.getTree());
-            // YourLangParser.g:222:5: ( ELSE terminator elseBody= expressions )?
+            // CameliaParser.g:222:5: ( ELSE terminator elseBody= expressions )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -2858,7 +2860,7 @@ public class CameliaParser extends Parser {
             }
             switch (alt24) {
                 case 1 :
-                    // YourLangParser.g:222:6: ELSE terminator elseBody= expressions
+                    // CameliaParser.g:222:6: ELSE terminator elseBody= expressions
                     {
                     ELSE73=(Token)match(input,ELSE,FOLLOW_ELSE_in_ifBlock1832); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -2919,28 +2921,28 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "whileBlock"
-    // YourLangParser.g:228:1: whileBlock returns [WhileNode node] : WHILE condition= expression terminator body= expressions END ;
-    public final whileBlock_return whileBlock() throws RecognitionException {
-        whileBlock_return retval = new whileBlock_return();
+    // CameliaParser.g:228:1: whileBlock returns [WhileNode node] : WHILE condition= expression terminator body= expressions END ;
+    public final CameliaParser.whileBlock_return whileBlock() throws RecognitionException {
+        CameliaParser.whileBlock_return retval = new CameliaParser.whileBlock_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token WHILE76=null;
         Token END78=null;
-        expression_return condition = null;
+        CameliaParser.expression_return condition = null;
 
-        expressions_return body = null;
+        CameliaParser.expressions_return body = null;
 
-        terminator_return terminator77 = null;
+        CameliaParser.terminator_return terminator77 = null;
 
 
         Object WHILE76_tree=null;
         Object END78_tree=null;
 
         try {
-            // YourLangParser.g:228:36: ( WHILE condition= expression terminator body= expressions END )
-            // YourLangParser.g:229:5: WHILE condition= expression terminator body= expressions END
+            // CameliaParser.g:228:36: ( WHILE condition= expression terminator body= expressions END )
+            // CameliaParser.g:229:5: WHILE condition= expression terminator body= expressions END
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3003,9 +3005,9 @@ public class CameliaParser extends Parser {
     };
 
     // $ANTLR start "tryBlock"
-    // YourLangParser.g:234:1: tryBlock returns [TryNode node] : TRY terminator tryBody= expressions ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )* END ;
-    public final tryBlock_return tryBlock() throws RecognitionException {
-        tryBlock_return retval = new tryBlock_return();
+    // CameliaParser.g:234:1: tryBlock returns [TryNode node] : TRY terminator tryBody= expressions ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )* END ;
+    public final CameliaParser.tryBlock_return tryBlock() throws RecognitionException {
+        CameliaParser.tryBlock_return retval = new CameliaParser.tryBlock_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -3016,13 +3018,13 @@ public class CameliaParser extends Parser {
         Token COLON83=null;
         Token NAME84=null;
         Token END86=null;
-        expressions_return tryBody = null;
+        CameliaParser.expressions_return tryBody = null;
 
-        expressions_return catchBody = null;
+        CameliaParser.expressions_return catchBody = null;
 
-        terminator_return terminator80 = null;
+        CameliaParser.terminator_return terminator80 = null;
 
-        terminator_return terminator85 = null;
+        CameliaParser.terminator_return terminator85 = null;
 
 
         Object TRY79_tree=null;
@@ -3033,8 +3035,8 @@ public class CameliaParser extends Parser {
         Object END86_tree=null;
 
         try {
-            // YourLangParser.g:234:32: ( TRY terminator tryBody= expressions ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )* END )
-            // YourLangParser.g:235:5: TRY terminator tryBody= expressions ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )* END
+            // CameliaParser.g:234:32: ( TRY terminator tryBody= expressions ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )* END )
+            // CameliaParser.g:235:5: TRY terminator tryBody= expressions ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )* END
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3056,9 +3058,9 @@ public class CameliaParser extends Parser {
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, tryBody.getTree());
             if ( state.backtracking==0 ) {
-               retval.node = new TryNode((tryBody!=null?tryBody.nodes:null));
+               retval.node = new TryNode((tryBody!=null?tryBody.nodes:null)); 
             }
-            // YourLangParser.g:237:5: ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )*
+            // CameliaParser.g:237:5: ( CATCH CONSTANT COLON NAME terminator catchBody= expressions )*
             loop25:
             do {
                 int alt25=2;
@@ -3071,7 +3073,7 @@ public class CameliaParser extends Parser {
 
                 switch (alt25) {
             	case 1 :
-            	    // YourLangParser.g:237:6: CATCH CONSTANT COLON NAME terminator catchBody= expressions
+            	    // CameliaParser.g:237:6: CATCH CONSTANT COLON NAME terminator catchBody= expressions
             	    {
             	    CATCH81=(Token)match(input,CATCH,FOLLOW_CATCH_in_tryBlock2014); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -3143,23 +3145,23 @@ public class CameliaParser extends Parser {
     }
     // $ANTLR end "tryBlock"
 
-    // $ANTLR start synpred8_YourLangParser
-    public final void synpred8_YourLangParser_fragment() throws RecognitionException {   
-        andExpression_return receiver = null;
+    // $ANTLR start synpred8_CameliaParser
+    public final void synpred8_CameliaParser_fragment() throws RecognitionException {   
+        CameliaParser.andExpression_return receiver = null;
 
-        orExpression_return arg = null;
+        CameliaParser.orExpression_return arg = null;
 
 
-        // YourLangParser.g:87:5: (receiver= andExpression OR arg= orExpression )
-        // YourLangParser.g:87:5: receiver= andExpression OR arg= orExpression
+        // CameliaParser.g:87:5: (receiver= andExpression OR arg= orExpression )
+        // CameliaParser.g:87:5: receiver= andExpression OR arg= orExpression
         {
-        pushFollow(FOLLOW_andExpression_in_synpred8_YourLangParser285);
+        pushFollow(FOLLOW_andExpression_in_synpred8_CameliaParser285);
         receiver=andExpression();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,OR,FOLLOW_OR_in_synpred8_YourLangParser293); if (state.failed) return ;
-        pushFollow(FOLLOW_orExpression_in_synpred8_YourLangParser297);
+        match(input,OR,FOLLOW_OR_in_synpred8_CameliaParser293); if (state.failed) return ;
+        pushFollow(FOLLOW_orExpression_in_synpred8_CameliaParser297);
         arg=orExpression();
 
         state._fsp--;
@@ -3167,25 +3169,25 @@ public class CameliaParser extends Parser {
 
         }
     }
-    // $ANTLR end synpred8_YourLangParser
+    // $ANTLR end synpred8_CameliaParser
 
-    // $ANTLR start synpred9_YourLangParser
-    public final void synpred9_YourLangParser_fragment() throws RecognitionException {   
-        relationalExpression_return receiver = null;
+    // $ANTLR start synpred9_CameliaParser
+    public final void synpred9_CameliaParser_fragment() throws RecognitionException {   
+        CameliaParser.relationalExpression_return receiver = null;
 
-        andExpression_return arg = null;
+        CameliaParser.andExpression_return arg = null;
 
 
-        // YourLangParser.g:93:5: (receiver= relationalExpression AND arg= andExpression )
-        // YourLangParser.g:93:5: receiver= relationalExpression AND arg= andExpression
+        // CameliaParser.g:93:5: (receiver= relationalExpression AND arg= andExpression )
+        // CameliaParser.g:93:5: receiver= relationalExpression AND arg= andExpression
         {
-        pushFollow(FOLLOW_relationalExpression_in_synpred9_YourLangParser347);
+        pushFollow(FOLLOW_relationalExpression_in_synpred9_CameliaParser347);
         receiver=relationalExpression();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,AND,FOLLOW_AND_in_synpred9_YourLangParser355); if (state.failed) return ;
-        pushFollow(FOLLOW_andExpression_in_synpred9_YourLangParser359);
+        match(input,AND,FOLLOW_AND_in_synpred9_CameliaParser355); if (state.failed) return ;
+        pushFollow(FOLLOW_andExpression_in_synpred9_CameliaParser359);
         arg=andExpression();
 
         state._fsp--;
@@ -3193,20 +3195,20 @@ public class CameliaParser extends Parser {
 
         }
     }
-    // $ANTLR end synpred9_YourLangParser
+    // $ANTLR end synpred9_CameliaParser
 
-    // $ANTLR start synpred14_YourLangParser
-    public final void synpred14_YourLangParser_fragment() throws RecognitionException {   
+    // $ANTLR start synpred14_CameliaParser
+    public final void synpred14_CameliaParser_fragment() throws RecognitionException {   
         Token op=null;
-        additiveExpression_return receiver = null;
+        CameliaParser.additiveExpression_return receiver = null;
 
-        relationalExpression_return arg = null;
+        CameliaParser.relationalExpression_return arg = null;
 
 
-        // YourLangParser.g:99:5: (receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression )
-        // YourLangParser.g:99:5: receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression
+        // CameliaParser.g:99:5: (receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression )
+        // CameliaParser.g:99:5: receiver= additiveExpression op= ( EQ | LE | GE | LT | GT ) arg= relationalExpression
         {
-        pushFollow(FOLLOW_additiveExpression_in_synpred14_YourLangParser400);
+        pushFollow(FOLLOW_additiveExpression_in_synpred14_CameliaParser400);
         receiver=additiveExpression();
 
         state._fsp--;
@@ -3222,7 +3224,7 @@ public class CameliaParser extends Parser {
             throw mse;
         }
 
-        pushFollow(FOLLOW_relationalExpression_in_synpred14_YourLangParser430);
+        pushFollow(FOLLOW_relationalExpression_in_synpred14_CameliaParser430);
         arg=relationalExpression();
 
         state._fsp--;
@@ -3230,20 +3232,20 @@ public class CameliaParser extends Parser {
 
         }
     }
-    // $ANTLR end synpred14_YourLangParser
+    // $ANTLR end synpred14_CameliaParser
 
-    // $ANTLR start synpred16_YourLangParser
-    public final void synpred16_YourLangParser_fragment() throws RecognitionException {   
+    // $ANTLR start synpred16_CameliaParser
+    public final void synpred16_CameliaParser_fragment() throws RecognitionException {   
         Token op=null;
-        multiplicativeExpression_return receiver = null;
+        CameliaParser.multiplicativeExpression_return receiver = null;
 
-        additiveExpression_return arg = null;
+        CameliaParser.additiveExpression_return arg = null;
 
 
-        // YourLangParser.g:106:5: (receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression )
-        // YourLangParser.g:106:5: receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression
+        // CameliaParser.g:106:5: (receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression )
+        // CameliaParser.g:106:5: receiver= multiplicativeExpression op= ( PLUS | MINUS ) arg= additiveExpression
         {
-        pushFollow(FOLLOW_multiplicativeExpression_in_synpred16_YourLangParser470);
+        pushFollow(FOLLOW_multiplicativeExpression_in_synpred16_CameliaParser470);
         receiver=multiplicativeExpression();
 
         state._fsp--;
@@ -3259,7 +3261,7 @@ public class CameliaParser extends Parser {
             throw mse;
         }
 
-        pushFollow(FOLLOW_additiveExpression_in_synpred16_YourLangParser488);
+        pushFollow(FOLLOW_additiveExpression_in_synpred16_CameliaParser488);
         arg=additiveExpression();
 
         state._fsp--;
@@ -3267,20 +3269,20 @@ public class CameliaParser extends Parser {
 
         }
     }
-    // $ANTLR end synpred16_YourLangParser
+    // $ANTLR end synpred16_CameliaParser
 
-    // $ANTLR start synpred19_YourLangParser
-    public final void synpred19_YourLangParser_fragment() throws RecognitionException {   
+    // $ANTLR start synpred19_CameliaParser
+    public final void synpred19_CameliaParser_fragment() throws RecognitionException {   
         Token op=null;
-        unaryExpression_return receiver = null;
+        CameliaParser.unaryExpression_return receiver = null;
 
-        multiplicativeExpression_return arg = null;
+        CameliaParser.multiplicativeExpression_return arg = null;
 
 
-        // YourLangParser.g:112:5: (receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression )
-        // YourLangParser.g:112:5: receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression
+        // CameliaParser.g:112:5: (receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression )
+        // CameliaParser.g:112:5: receiver= unaryExpression op= ( MUL | DIV | MOD ) arg= multiplicativeExpression
         {
-        pushFollow(FOLLOW_unaryExpression_in_synpred19_YourLangParser536);
+        pushFollow(FOLLOW_unaryExpression_in_synpred19_CameliaParser536);
         receiver=unaryExpression();
 
         state._fsp--;
@@ -3296,7 +3298,7 @@ public class CameliaParser extends Parser {
             throw mse;
         }
 
-        pushFollow(FOLLOW_multiplicativeExpression_in_synpred19_YourLangParser556);
+        pushFollow(FOLLOW_multiplicativeExpression_in_synpred19_CameliaParser556);
         arg=multiplicativeExpression();
 
         state._fsp--;
@@ -3304,34 +3306,34 @@ public class CameliaParser extends Parser {
 
         }
     }
-    // $ANTLR end synpred19_YourLangParser
+    // $ANTLR end synpred19_CameliaParser
 
-    // $ANTLR start synpred37_YourLangParser
-    public final void synpred37_YourLangParser_fragment() throws RecognitionException {   
-        message_return head = null;
+    // $ANTLR start synpred37_CameliaParser
+    public final void synpred37_CameliaParser_fragment() throws RecognitionException {   
+        CameliaParser.message_return head = null;
 
 
-        // YourLangParser.g:163:6: (head= message DOT )
-        // YourLangParser.g:163:6: head= message DOT
+        // CameliaParser.g:163:6: (head= message DOT )
+        // CameliaParser.g:163:6: head= message DOT
         {
-        pushFollow(FOLLOW_message_in_synpred37_YourLangParser1111);
+        pushFollow(FOLLOW_message_in_synpred37_CameliaParser1111);
         head=message();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,DOT,FOLLOW_DOT_in_synpred37_YourLangParser1113); if (state.failed) return ;
+        match(input,DOT,FOLLOW_DOT_in_synpred37_CameliaParser1113); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred37_YourLangParser
+    // $ANTLR end synpred37_CameliaParser
 
     // Delegated rules
 
-    public final boolean synpred16_YourLangParser() {
+    public final boolean synpred16_CameliaParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred16_YourLangParser_fragment(); // can never throw exception
+            synpred16_CameliaParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3341,11 +3343,11 @@ public class CameliaParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred19_YourLangParser() {
+    public final boolean synpred19_CameliaParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred19_YourLangParser_fragment(); // can never throw exception
+            synpred19_CameliaParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3355,11 +3357,11 @@ public class CameliaParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred8_YourLangParser() {
+    public final boolean synpred37_CameliaParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred8_YourLangParser_fragment(); // can never throw exception
+            synpred37_CameliaParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3369,11 +3371,11 @@ public class CameliaParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred14_YourLangParser() {
+    public final boolean synpred9_CameliaParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred14_YourLangParser_fragment(); // can never throw exception
+            synpred9_CameliaParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3383,11 +3385,11 @@ public class CameliaParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred9_YourLangParser() {
+    public final boolean synpred8_CameliaParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred9_YourLangParser_fragment(); // can never throw exception
+            synpred8_CameliaParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3397,11 +3399,11 @@ public class CameliaParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred37_YourLangParser() {
+    public final boolean synpred14_CameliaParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred37_YourLangParser_fragment(); // can never throw exception
+            synpred14_CameliaParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -3554,7 +3556,7 @@ public class CameliaParser extends Parser {
                         int index7_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3569,7 +3571,7 @@ public class CameliaParser extends Parser {
                         int index7_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3584,7 +3586,7 @@ public class CameliaParser extends Parser {
                         int index7_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3599,7 +3601,7 @@ public class CameliaParser extends Parser {
                         int index7_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3614,7 +3616,7 @@ public class CameliaParser extends Parser {
                         int index7_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3629,7 +3631,7 @@ public class CameliaParser extends Parser {
                         int index7_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3644,7 +3646,7 @@ public class CameliaParser extends Parser {
                         int index7_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3659,7 +3661,7 @@ public class CameliaParser extends Parser {
                         int index7_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3674,7 +3676,7 @@ public class CameliaParser extends Parser {
                         int index7_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3689,7 +3691,7 @@ public class CameliaParser extends Parser {
                         int index7_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3704,7 +3706,7 @@ public class CameliaParser extends Parser {
                         int index7_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3719,7 +3721,7 @@ public class CameliaParser extends Parser {
                         int index7_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3734,7 +3736,7 @@ public class CameliaParser extends Parser {
                         int index7_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3749,7 +3751,7 @@ public class CameliaParser extends Parser {
                         int index7_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3764,7 +3766,7 @@ public class CameliaParser extends Parser {
                         int index7_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3779,7 +3781,7 @@ public class CameliaParser extends Parser {
                         int index7_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3794,7 +3796,7 @@ public class CameliaParser extends Parser {
                         int index7_17 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred8_YourLangParser()) ) {s = 18;}
+                        if ( (synpred8_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3891,7 +3893,7 @@ public class CameliaParser extends Parser {
                         int index8_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3906,7 +3908,7 @@ public class CameliaParser extends Parser {
                         int index8_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3921,7 +3923,7 @@ public class CameliaParser extends Parser {
                         int index8_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3936,7 +3938,7 @@ public class CameliaParser extends Parser {
                         int index8_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3951,7 +3953,7 @@ public class CameliaParser extends Parser {
                         int index8_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3966,7 +3968,7 @@ public class CameliaParser extends Parser {
                         int index8_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3981,7 +3983,7 @@ public class CameliaParser extends Parser {
                         int index8_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -3996,7 +3998,7 @@ public class CameliaParser extends Parser {
                         int index8_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4011,7 +4013,7 @@ public class CameliaParser extends Parser {
                         int index8_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4026,7 +4028,7 @@ public class CameliaParser extends Parser {
                         int index8_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4041,7 +4043,7 @@ public class CameliaParser extends Parser {
                         int index8_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4056,7 +4058,7 @@ public class CameliaParser extends Parser {
                         int index8_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4071,7 +4073,7 @@ public class CameliaParser extends Parser {
                         int index8_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4086,7 +4088,7 @@ public class CameliaParser extends Parser {
                         int index8_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4101,7 +4103,7 @@ public class CameliaParser extends Parser {
                         int index8_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4116,7 +4118,7 @@ public class CameliaParser extends Parser {
                         int index8_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4131,7 +4133,7 @@ public class CameliaParser extends Parser {
                         int index8_17 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred9_YourLangParser()) ) {s = 18;}
+                        if ( (synpred9_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4228,7 +4230,7 @@ public class CameliaParser extends Parser {
                         int index9_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4243,7 +4245,7 @@ public class CameliaParser extends Parser {
                         int index9_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4258,7 +4260,7 @@ public class CameliaParser extends Parser {
                         int index9_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4273,7 +4275,7 @@ public class CameliaParser extends Parser {
                         int index9_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4288,7 +4290,7 @@ public class CameliaParser extends Parser {
                         int index9_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4303,7 +4305,7 @@ public class CameliaParser extends Parser {
                         int index9_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4318,7 +4320,7 @@ public class CameliaParser extends Parser {
                         int index9_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4333,7 +4335,7 @@ public class CameliaParser extends Parser {
                         int index9_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4348,7 +4350,7 @@ public class CameliaParser extends Parser {
                         int index9_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4363,7 +4365,7 @@ public class CameliaParser extends Parser {
                         int index9_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4378,7 +4380,7 @@ public class CameliaParser extends Parser {
                         int index9_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4393,7 +4395,7 @@ public class CameliaParser extends Parser {
                         int index9_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4408,7 +4410,7 @@ public class CameliaParser extends Parser {
                         int index9_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4423,7 +4425,7 @@ public class CameliaParser extends Parser {
                         int index9_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4438,7 +4440,7 @@ public class CameliaParser extends Parser {
                         int index9_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4453,7 +4455,7 @@ public class CameliaParser extends Parser {
                         int index9_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4468,7 +4470,7 @@ public class CameliaParser extends Parser {
                         int index9_17 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred14_YourLangParser()) ) {s = 18;}
+                        if ( (synpred14_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4565,7 +4567,7 @@ public class CameliaParser extends Parser {
                         int index10_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4580,7 +4582,7 @@ public class CameliaParser extends Parser {
                         int index10_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4595,7 +4597,7 @@ public class CameliaParser extends Parser {
                         int index10_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4610,7 +4612,7 @@ public class CameliaParser extends Parser {
                         int index10_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4625,7 +4627,7 @@ public class CameliaParser extends Parser {
                         int index10_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4640,7 +4642,7 @@ public class CameliaParser extends Parser {
                         int index10_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4655,7 +4657,7 @@ public class CameliaParser extends Parser {
                         int index10_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4670,7 +4672,7 @@ public class CameliaParser extends Parser {
                         int index10_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4685,7 +4687,7 @@ public class CameliaParser extends Parser {
                         int index10_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4700,7 +4702,7 @@ public class CameliaParser extends Parser {
                         int index10_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4715,7 +4717,7 @@ public class CameliaParser extends Parser {
                         int index10_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4730,7 +4732,7 @@ public class CameliaParser extends Parser {
                         int index10_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4745,7 +4747,7 @@ public class CameliaParser extends Parser {
                         int index10_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4760,7 +4762,7 @@ public class CameliaParser extends Parser {
                         int index10_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4775,7 +4777,7 @@ public class CameliaParser extends Parser {
                         int index10_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4790,7 +4792,7 @@ public class CameliaParser extends Parser {
                         int index10_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4805,7 +4807,7 @@ public class CameliaParser extends Parser {
                         int index10_17 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred16_YourLangParser()) ) {s = 18;}
+                        if ( (synpred16_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4902,7 +4904,7 @@ public class CameliaParser extends Parser {
                         int index11_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4917,7 +4919,7 @@ public class CameliaParser extends Parser {
                         int index11_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4932,7 +4934,7 @@ public class CameliaParser extends Parser {
                         int index11_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4947,7 +4949,7 @@ public class CameliaParser extends Parser {
                         int index11_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4962,7 +4964,7 @@ public class CameliaParser extends Parser {
                         int index11_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4977,7 +4979,7 @@ public class CameliaParser extends Parser {
                         int index11_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -4992,7 +4994,7 @@ public class CameliaParser extends Parser {
                         int index11_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5007,7 +5009,7 @@ public class CameliaParser extends Parser {
                         int index11_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5022,7 +5024,7 @@ public class CameliaParser extends Parser {
                         int index11_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5037,7 +5039,7 @@ public class CameliaParser extends Parser {
                         int index11_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5052,7 +5054,7 @@ public class CameliaParser extends Parser {
                         int index11_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5067,7 +5069,7 @@ public class CameliaParser extends Parser {
                         int index11_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5082,7 +5084,7 @@ public class CameliaParser extends Parser {
                         int index11_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5097,7 +5099,7 @@ public class CameliaParser extends Parser {
                         int index11_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5112,7 +5114,7 @@ public class CameliaParser extends Parser {
                         int index11_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5127,7 +5129,7 @@ public class CameliaParser extends Parser {
                         int index11_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5142,7 +5144,7 @@ public class CameliaParser extends Parser {
                         int index11_17 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred19_YourLangParser()) ) {s = 18;}
+                        if ( (synpred19_CameliaParser()) ) {s = 18;}
 
                         else if ( (true) ) {s = 19;}
 
@@ -5362,22 +5364,22 @@ public class CameliaParser extends Parser {
     public static final BitSet FOLLOW_terminator_in_tryBlock2022 = new BitSet(new long[]{0x000020014293F370L});
     public static final BitSet FOLLOW_expressions_in_tryBlock2032 = new BitSet(new long[]{0x0000000000000C00L});
     public static final BitSet FOLLOW_END_in_tryBlock2063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_andExpression_in_synpred8_YourLangParser285 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_OR_in_synpred8_YourLangParser293 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_orExpression_in_synpred8_YourLangParser297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_relationalExpression_in_synpred9_YourLangParser347 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_AND_in_synpred9_YourLangParser355 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_andExpression_in_synpred9_YourLangParser359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_additiveExpression_in_synpred14_YourLangParser400 = new BitSet(new long[]{0x0000003E00000000L});
-    public static final BitSet FOLLOW_set_in_synpred14_YourLangParser410 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_relationalExpression_in_synpred14_YourLangParser430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_multiplicativeExpression_in_synpred16_YourLangParser470 = new BitSet(new long[]{0x000000C000000000L});
-    public static final BitSet FOLLOW_set_in_synpred16_YourLangParser480 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_additiveExpression_in_synpred16_YourLangParser488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unaryExpression_in_synpred19_YourLangParser536 = new BitSet(new long[]{0x0000070000000000L});
-    public static final BitSet FOLLOW_set_in_synpred19_YourLangParser546 = new BitSet(new long[]{0x000020014293F370L});
-    public static final BitSet FOLLOW_multiplicativeExpression_in_synpred19_YourLangParser556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_message_in_synpred37_YourLangParser1111 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_DOT_in_synpred37_YourLangParser1113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_andExpression_in_synpred8_CameliaParser285 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_OR_in_synpred8_CameliaParser293 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_orExpression_in_synpred8_CameliaParser297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_relationalExpression_in_synpred9_CameliaParser347 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_AND_in_synpred9_CameliaParser355 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_andExpression_in_synpred9_CameliaParser359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_additiveExpression_in_synpred14_CameliaParser400 = new BitSet(new long[]{0x0000003E00000000L});
+    public static final BitSet FOLLOW_set_in_synpred14_CameliaParser410 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_relationalExpression_in_synpred14_CameliaParser430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_multiplicativeExpression_in_synpred16_CameliaParser470 = new BitSet(new long[]{0x000000C000000000L});
+    public static final BitSet FOLLOW_set_in_synpred16_CameliaParser480 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_additiveExpression_in_synpred16_CameliaParser488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unaryExpression_in_synpred19_CameliaParser536 = new BitSet(new long[]{0x0000070000000000L});
+    public static final BitSet FOLLOW_set_in_synpred19_CameliaParser546 = new BitSet(new long[]{0x000020014293F370L});
+    public static final BitSet FOLLOW_multiplicativeExpression_in_synpred19_CameliaParser556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_message_in_synpred37_CameliaParser1111 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_DOT_in_synpred37_CameliaParser1113 = new BitSet(new long[]{0x0000000000000002L});
 
 }
