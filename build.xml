@@ -4,7 +4,7 @@
     <fileset dir="vendor" includes="*.jar"/>
   </path>
   
-  <target name="all" depends="grammar,jar,test" />
+  <target name="all" depends="grammar,jar" />
   
   <target name="init">
     <mkdir dir="build"/>
@@ -22,7 +22,7 @@
   </target>
 
   <target name="compile" depends="init" description="Compile Java sources.">
-    <javac destdir="build/classes" debug="true" target="1.5">
+    <javac destdir="build/classes" debug="true" target="1.8">
       <classpath refid="build.classpath"/>
       <src path="src"/>
       <include name="**/*.java"/>
@@ -41,12 +41,6 @@
         <attribute name="Main-Class" value="org.kernel.camelia.KernelMain"/>
       </manifest>
     </jar>
-  </target>
-  
-  <target name="test" description="Runs the tests.">
-    <exec executable="ruby" failonerror="true">
-      <arg value="test/runner.rb"/>
-    </exec>
   </target>
 
   <target name="clean" description="Remove generated files and directories.">

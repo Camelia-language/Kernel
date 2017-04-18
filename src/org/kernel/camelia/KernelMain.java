@@ -2,7 +2,6 @@ package org.kernel.camelia;
 
 import org.kernel.camelia.language.Bootstrapper;
 
-import java.io.File;
 import java.io.FileReader;
 import java.io.Reader;
 import java.io.StringReader;
@@ -16,9 +15,10 @@ public class KernelMain {
         boolean debug = false;
 
         for (int i = 0; i < args.length; i++) {
-            if (args[i].equals("-e")) reader = new StringReader(args[++i]);
-            else if (args[i].equals("-d")) debug = true;
-            else reader = new FileReader(args[i]);
+            if (args[i].equals("-e")) { reader = new StringReader(args[++i]); }
+            else if (args[i].equals("-d")) { debug = true; }
+            else { reader = new FileReader(args[i]);  }
+
         }
 
         if (reader == null) {
@@ -27,5 +27,7 @@ public class KernelMain {
         }
 
         Bootstrapper.run().eval(reader);
+
+        reader.close();
     }
 }
