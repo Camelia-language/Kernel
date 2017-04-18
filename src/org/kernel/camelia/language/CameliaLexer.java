@@ -1,5 +1,5 @@
 // $ANTLR 3.1.1 CameliaLexer.g 2015-04-25 18:45:14
- package org.kernel.camelia.language; 
+ package org.kernel.camelia.language;
 
 import org.antlr.runtime.*;
 import java.util.Stack;
