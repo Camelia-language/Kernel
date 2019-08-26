@@ -1,5 +1,5 @@
 # Kernel
-Camelia's kernel
+Camelia's kernel (best kernel ever!)
 
 This project serves as a base for creating a programming language on top of
 the JVM base of the work of Marc-Andre Cournoyer
